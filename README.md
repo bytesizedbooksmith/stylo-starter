@@ -62,6 +62,14 @@ modify and share freely. The reference texts themselves are not included in this
 repository; you download them from Project Gutenberg at build time, and they are
 public domain.
 
+## Acknowledgments
+
+The approach behind this toolkit was **deeply inspired by Future Fiction
+Academy's stylometry class**, which is where these ideas came from. The engine
+and manual here are an independent, from-scratch implementation of classic,
+public stylometry methods — none of FFA's course materials are reproduced — but
+the inspiration and the debt are theirs, and gratefully acknowledged.
+
 ## Layout
 
 ```

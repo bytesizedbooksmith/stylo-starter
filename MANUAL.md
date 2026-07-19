@@ -290,15 +290,19 @@ The style card steers *before* you draft; the check pays off *after*.
 
 ---
 
-## 11. Where this came from, and what's yours
+## 11. Credit, and what's yours
 
-This kit is deliberately free of any one course's or vendor's material. The
-engine is a from-scratch implementation of **classic, public stylometry** —
-Burrows's Delta, function-word frequency analysis, the standard authorship
-features — using nothing but Python's standard library. The reference texts are
-**Project Gutenberg** public-domain editions, fetched by you, at build time,
-from the ids in `catalog.csv`.
+The approach here was **deeply inspired by Future Fiction Academy's stylometry
+class** — that is where these ideas came from, and the debt is gladly
+acknowledged. What lives in this repository, though, is an independent,
+from-scratch build: the engine is original code implementing **classic, public
+stylometry** — Burrows's Delta, function-word frequency analysis, the standard
+authorship features — in nothing but Python's standard library, and this manual
+is written fresh. **None of FFA's course materials are reproduced or included
+here.**
+
+The reference texts are **Project Gutenberg** public-domain editions, fetched by
+you at build time from the ids in `catalog.csv`.
 
 Nothing you add — your own prose, your own pen's profile — is shared by using
 this. It all stays in your copy. Measure, build, check: all of it is local.
-```
