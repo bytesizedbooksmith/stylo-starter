@@ -1,0 +1,119 @@
+{
+  "jane-austen": {
+    "slug": "jane-austen",
+    "name": "Jane Austen",
+    "short": "Austen",
+    "genre": "Comedy of manners / romance",
+    "period": "1811–1817",
+    "caution": "Close third person throughout, built on free indirect discourse. The cleanest single-voice, single-genre corpus in the collection — a strong romance and courtship-comedy contrast lens.",
+    "single_author": true
+  },
+  "charlotte-bronte": {
+    "slug": "charlotte-bronte",
+    "name": "Charlotte Bronte",
+    "short": "Bronte",
+    "genre": "Gothic romance / literary fiction",
+    "period": "1847-1853",
+    "single_author": true,
+    "caution": "Both novels are first-person retrospective narration (Jane Eyre; Lucy Snowe in Villette) in an intense, morally serious, gothic-tinged register. A coherent single-voice corpus and a strong romance / gothic-romance lens."
+  },
+  "louisa-may-alcott": {
+    "slug": "louisa-may-alcott",
+    "name": "Louisa May Alcott",
+    "short": "Alcott",
+    "genre": "Domestic / family fiction",
+    "period": "1868-1871",
+    "single_author": true,
+    "caution": "Warm third-person domestic fiction of family and moral growth — a wholesome, found-family register close to cozy and women's fiction. Little Men moves to an ensemble school setting, which widens the cast and dialogue lanes."
+  },
+  "elizabeth-gaskell": {
+    "slug": "elizabeth-gaskell",
+    "name": "Elizabeth Gaskell",
+    "short": "Gaskell",
+    "genre": "Social and domestic fiction",
+    "period": "1853–1865",
+    "caution": "Cozy core only (the industrial novels North and South / Mary Barton are deliberately excluded). *Cranford* is a first-person episodic sketch-novel; *Cousin Phillis* and *Wives and Daughters* are third person, so whole-author POV numbers average across two lanes.",
+    "single_author": true
+  },
+  "l-m-montgomery": {
+    "slug": "l-m-montgomery",
+    "name": "L. M. Montgomery",
+    "short": "Montgomery",
+    "genre": "Children's and family fiction",
+    "period": "1908–1915",
+    "caution": "",
+    "single_author": true
+  },
+  "kenneth-grahame": {
+    "slug": "kenneth-grahame",
+    "name": "Kenneth Grahame",
+    "short": "Grahame",
+    "genre": "Children's / pastoral fantasy",
+    "period": "1895–1908",
+    "caution": "Two lanes averaged: *The Golden Age* and *Dream Days* are first-person adult reminiscence of childhood; *The Wind in the Willows* is third-person pastoral animal fantasy. A small corpus (~144k) so its lanes are wider than the larger authors'.",
+    "single_author": true
+  },
+  "e-nesbit": {
+    "slug": "e-nesbit",
+    "name": "E. Nesbit",
+    "short": "Nesbit",
+    "genre": "Children's fantasy and family fiction",
+    "period": "1899–1912",
+    "caution": "The Bastable books are narrated in first person by Oswald, a child pretending not to be the narrator; the fantasy novels use a warm, intrusive third person. These are two distinct lanes and the whole-author numbers average across them.",
+    "single_author": true
+  },
+  "agatha-christie": {
+    "slug": "agatha-christie",
+    "name": "Agatha Christie",
+    "short": "Christie",
+    "genre": "Detective fiction",
+    "period": "1920–1930",
+    "caution": "Two narrators sit inside this corpus: Hastings and the Vicar narrate in first person, while *The Seven Dials Mystery* is third person. Check the per-work table before treating any pronoun or POV number as a single Christie habit.",
+    "single_author": true
+  },
+  "arthur-conan-doyle": {
+    "slug": "arthur-conan-doyle",
+    "name": "Arthur Conan Doyle",
+    "short": "Doyle",
+    "genre": "Detective fiction (Sherlock Holmes)",
+    "period": "1887–1927",
+    "caution": "The full Holmes canon (all US public domain since the 1927 Case-Book predates 1930). Mostly first-person Watson narration, but *A Study in Scarlet* and *The Valley of Fear* each break into a long third-person back-story section, which widens the POV numbers.",
+    "single_author": true
+  },
+  "g-k-chesterton": {
+    "slug": "g-k-chesterton",
+    "name": "G. K. Chesterton",
+    "short": "Chesterton",
+    "genre": "Detective fiction (Father Brown)",
+    "period": "1911–1927",
+    "caution": "Three Father Brown short-story collections — a warm, paradox-driven cozy-mystery voice distinct from Christie's puzzle-plot rhythm. The fetch converter marks no per-story boundaries, so chunk *location* labels are absent; measurement is unaffected.",
+    "single_author": true
+  },
+  "bram-stoker": {
+    "slug": "bram-stoker",
+    "name": "Bram Stoker",
+    "short": "Stoker",
+    "genre": "Gothic horror",
+    "period": "1897–1914",
+    "caution": "*Dracula* is epistolary — letters, diaries, telegrams and news clippings across several narrators — which widens every rhythm and POV lane; the other three novels are conventional narration. *The Jewel of Seven Stars* here is the standard Gutenberg edition (PG 3781).",
+    "single_author": true
+  },
+  "h-g-wells": {
+    "slug": "h-g-wells",
+    "name": "H. G. Wells",
+    "short": "Wells",
+    "genre": "Science fiction",
+    "period": "1895–1898",
+    "caution": "Three of the four novels are first-person retrospective narration; *The Invisible Man* is third person. The scientific romance register also carries more exposition than any other author here.",
+    "single_author": true
+  },
+  "edith-wharton": {
+    "slug": "edith-wharton",
+    "name": "Edith Wharton",
+    "short": "Wharton",
+    "genre": "Social and literary fiction",
+    "period": "1905–1920",
+    "caution": "",
+    "single_author": true
+  }
+}
