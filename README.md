@@ -55,6 +55,13 @@ prose, your own pen's profile — stays entirely in your copy.
 Public-domain status is judged here on a U.S. publication-year basis and changes
 by country and by year; confirm a work where you are before adding it.
 
+## License
+
+The code and documentation are released under the [MIT License](LICENSE) — use,
+modify and share freely. The reference texts themselves are not included in this
+repository; you download them from Project Gutenberg at build time, and they are
+public domain.
+
 ## Layout
 
 ```

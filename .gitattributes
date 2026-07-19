@@ -1,0 +1,4 @@
+# Normalize line endings: store as LF in the repo and check out as LF on every
+# platform, so a stdlib Python tool stays identical whether cloned on Windows,
+# macOS or Linux. Prevents the CRLF churn Windows git otherwise introduces.
+* text=auto eol=lf
