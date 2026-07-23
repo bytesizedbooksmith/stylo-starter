@@ -38,7 +38,7 @@ from .segment import (
 # ---------------------------------------------------------------------------
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Metric:
     key: str
     label: str
@@ -441,7 +441,7 @@ def _band(length: int) -> str:
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass()
 class Sentence:
     text: str
     para_index: int
@@ -450,7 +450,7 @@ class Sentence:
     has_speech: bool = False
 
 
-@dataclass(slots=True)
+@dataclass()
 class Sample:
     """Everything the feature functions need, computed once."""
 

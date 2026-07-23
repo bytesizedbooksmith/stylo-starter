@@ -39,7 +39,7 @@ def frequency_vector(toks: Sequence[str], mfw: Sequence[str]) -> list[float]:
     return [counts[w] * 1000.0 / total for w in mfw]
 
 
-@dataclass(slots=True)
+@dataclass()
 class Standardiser:
     """Corpus-wide mean and standard deviation for each MFW frequency."""
 

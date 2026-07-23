@@ -28,7 +28,7 @@ ROOT = (Path(os.environ["STYLO_DATA_ROOT"]).resolve()
 CATALOG = ROOT / "catalog.csv"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class WorkFilter:
     """Line-range trim applied to one source file."""
 
@@ -66,7 +66,7 @@ EXCLUDED_WORKS: dict[str, str] = {
 WORK_FILTERS: dict[str, WorkFilter] = {}
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class AuthorMeta:
     slug: str
     name: str
@@ -97,7 +97,7 @@ def _load_registry() -> dict[str, AuthorMeta]:
 AUTHORS: dict[str, AuthorMeta] = _load_registry()
 
 
-@dataclass(slots=True)
+@dataclass()
 class Work:
     """One catalogue row plus its parsed text."""
 
@@ -124,7 +124,7 @@ class Work:
         return self.document
 
 
-@dataclass(slots=True)
+@dataclass()
 class Chunk:
     """A ~2,000-word paragraph-aligned analysis unit."""
 

@@ -33,7 +33,7 @@ MODERATE_CV = 0.30
 DISTINCT_Z = 1.0
 
 
-@dataclass(slots=True)
+@dataclass()
 class Lane:
     """One feature's lane for one author."""
 
@@ -85,7 +85,7 @@ class Lane:
         return 0.0
 
 
-@dataclass(slots=True)
+@dataclass()
 class WorkSummary:
     title: str
     year: str
@@ -98,7 +98,7 @@ class WorkSummary:
     metrics: dict[str, float] = field(default_factory=dict)
 
 
-@dataclass(slots=True)
+@dataclass()
 class DeltaModel:
     """Everything needed to place a new passage in the Delta space."""
 
@@ -112,7 +112,7 @@ class DeltaModel:
     ngram_loo_min: float = 0.0
 
 
-@dataclass(slots=True)
+@dataclass()
 class AuthorProfile:
     slug: str
     name: str

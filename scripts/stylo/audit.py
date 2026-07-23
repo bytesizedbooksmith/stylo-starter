@@ -216,7 +216,7 @@ ADVICE: dict[str, tuple[str, str]] = {
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass()
 class Drift:
     key: str
     label: str
@@ -236,7 +236,7 @@ class Drift:
         return asdict(self)
 
 
-@dataclass(slots=True)
+@dataclass()
 class Location:
     kind: str
     where: str
@@ -246,7 +246,7 @@ class Location:
         return asdict(self)
 
 
-@dataclass(slots=True)
+@dataclass()
 class AuditResult:
     author: str
     author_slug: str
