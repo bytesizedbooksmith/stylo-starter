@@ -80,7 +80,7 @@ def parse_front_matter(raw: str) -> tuple[dict[str, str], str]:
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass()
 class Paragraph:
     """One prose paragraph.
 
@@ -268,7 +268,7 @@ def split_sentences(text: str) -> list[str]:
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass()
 class Utterance:
     """One quoted speech span."""
 
@@ -316,7 +316,7 @@ def split_dialogue_narration(text: str) -> tuple[str, str]:
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass()
 class Document:
     """A parsed work or draft, ready for measurement."""
 
