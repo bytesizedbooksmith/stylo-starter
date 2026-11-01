@@ -1,0 +1,2 @@
+# Optional: longer writing
+Read machine/START.md. Start with representative passages copied from the manuscript. Keep chapters, narrative modes and source dates identified. Do not compare a long mixed manuscript to a tiny sample as if they were equivalent. Use fuller profile analysis only when warranted, explain sample limitations, and keep detailed tables behind HTML expanders. Recommend at most a few useful places to examine; never turn a long report into hundreds of mandatory edits.

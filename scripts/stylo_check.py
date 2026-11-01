@@ -66,6 +66,7 @@ def main() -> int:
     parser.add_argument("--tense", default="", choices=["", "past", "present"],
                         help="intended narration tense; enables slip detection")
     parser.add_argument("--json", action="store_true", help="emit JSON")
+    parser.add_argument("--output-dir", type=Path, help="write HTML and AI reports into a NEW folder")
     args = parser.parse_args()
 
     # Resolve the target. A draft is always measured against exactly one
@@ -129,6 +130,17 @@ def main() -> int:
         keys=keys, scene=args.scene, pov=args.pov, tense=args.tense,
     )
 
+    if args.output_dir:
+        from stylo.html_report import audit_page
+        try:
+            args.output_dir.mkdir(parents=True, exist_ok=False)
+            (args.output_dir / "report.html").write_text(audit_page(result, profile), encoding="utf-8")
+            (args.output_dir / "report.md").write_text("# Profile comparison — AI evidence\n\n" + render(result, profile), encoding="utf-8")
+            (args.output_dir / "measurements.json").write_text(json.dumps(result.as_dict(), indent=2), encoding="utf-8")
+        except OSError as error:
+            parser.exit(2, f"Could not save the reading report: {error}. Use a new output folder. Source prose was not changed.\n")
+        if not args.json:
+            print(f"Your reading page: {(args.output_dir / 'report.html').resolve()}")
     if args.json:
         print(json.dumps(result.as_dict(), indent=2))
     else:

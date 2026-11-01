@@ -127,7 +127,7 @@ def render_report(profile: AuthorProfile) -> str:
     add(f"style_card: {profile.slug}-style-card.md")
     add(f"chunk_metrics_csv: chunk-metrics.csv")
     add(f"work_metrics_csv: work-metrics.csv")
-    add(f"generated_by: scripts/build_author_profiles.py")
+    add(f"generated_by: scripts/build_stylo_profiles.py")
     add(f"generated_on: {date.today().isoformat()}")
     add("---")
     add("")
@@ -138,7 +138,7 @@ def render_report(profile: AuthorProfile) -> str:
         f"of about {profile.chunk_target_words:,} words each.*")
     add("")
     add("> **Generated file.** Every number here comes from "
-        "`scripts/build_author_profiles.py` reading the Markdown in `works/`. "
+        "`scripts/build_stylo_profiles.py` reading the Markdown in `works/`. "
         "Edits made by hand will be overwritten on the next build. The "
         "qualitative craft notes live in `scripts/stylo/voice_notes.py`.")
     add("")
@@ -403,7 +403,7 @@ def render_style_card(profile: AuthorProfile) -> str:
     add(f"report: {profile.slug}-stylometry-report.md")
     add("profile_json: profile.json")
     add(f"scene_types: [{', '.join(notes['scenes'])}]")
-    add(f"generated_by: scripts/build_author_profiles.py")
+    add(f"generated_by: scripts/build_stylo_profiles.py")
     add(f"generated_on: {date.today().isoformat()}")
     add("---")
     add("")

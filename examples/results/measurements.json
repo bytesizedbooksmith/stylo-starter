@@ -1,0 +1,49 @@
+{
+  "schema": "stylo-exploration/1",
+  "tool_version": "1.0",
+  "generated_utc": "2026-09-12T14:21:21+00:00",
+  "demo": true,
+  "mode": "comparison",
+  "samples": [
+    {
+      "source": "sample-a.md",
+      "sha256": "c2cdd9f9a127a2b5e9b7f612889b5e32e88a103274428dd0758d5c909f3b3dfa",
+      "words": 154,
+      "paragraph_count": 13,
+      "measurements": {
+        "sent_mean": 5.923076923076923,
+        "sent_median": 4.5,
+        "para_mean_words": 11.846153846153847,
+        "dialogue_word_pct": 16.883116883116884,
+        "para_one_sentence_pct": 61.53846153846154,
+        "narr_emdash_per_1k": 0.0
+      }
+    },
+    {
+      "source": "sample-b.md",
+      "sha256": "72466b5b0d7dde20089e90318808f9a48c2cc3f3dc624877e071b3911bea62d8",
+      "words": 201,
+      "paragraph_count": 5,
+      "measurements": {
+        "sent_mean": 20.1,
+        "sent_median": 20.5,
+        "para_mean_words": 40.2,
+        "dialogue_word_pct": 1.9900497512437811,
+        "para_one_sentence_pct": 20.0,
+        "narr_emdash_per_1k": 0.0
+      }
+    }
+  ],
+  "observations": [
+    "Sentences average 5.9 words in sample A and 20.1 words in sample B.",
+    "Paragraphs average 11.8 words in sample A and 40.2 words in sample B.",
+    "Words inside recognized quotation marks account for 16.9% in sample A and 2.0% in sample B."
+  ],
+  "limits": [
+    "These are descriptions of the supplied passages, not a stable author profile or a quality score.",
+    "Short samples change easily. The demonstration is intentionally short so you can see what changes.",
+    "Sentence boundaries and quotation handling follow the toolkit's English-oriented rules. Unusual dialogue formatting can affect results.",
+    "Quoted words are an estimate of dialogue: a quoted letter or thought can be counted too.",
+    "Subject, scene purpose and editing stage can explain a difference. A difference need not be repaired."
+  ]
+}

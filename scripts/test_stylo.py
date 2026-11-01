@@ -258,7 +258,7 @@ def test_audit_against_built_profile() -> None:
     path = ROOT / "authors" / "edith-wharton" / "profile" / "profile.json"
     reference_path = ROOT / "stylometry" / "reference" / "delta-model.json"
     if not path.exists() or not reference_path.exists():
-        print("  (skipping end-to-end test: run build_author_profiles.py first)")
+        print("  (skipping end-to-end test: run build_stylo_profiles.py first)")
         return
 
     profile = AuthorProfile.load(path)

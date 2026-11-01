@@ -1,0 +1,2 @@
+# Optional: dialogue and narration
+Read machine/START.md. Explain that words inside quotation marks are an imperfect proxy for speech; letters and quoted thoughts count too. Let the scene's purpose guide interpretation. Compare two passage copies with basic exploration. For full profiles, existing --scene conversation/reflection options alter dialogue comparison lanes; they do not prove the scene type. Show HTML observations and preserve deliberate differences.

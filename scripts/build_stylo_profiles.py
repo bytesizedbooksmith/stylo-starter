@@ -256,6 +256,14 @@ def write_work_csv(path: Path, works: list[WorkSummary]) -> None:
 def write_author_outputs(profile: AuthorProfile, chunks: list[Chunk]) -> None:
     folder = ROOT / "authors" / profile.slug / "profile"
     folder.mkdir(parents=True, exist_ok=True)
+    from stylo.html_report import markdown_page
+    report_md = render_report(profile)
+    card_md = render_style_card(profile)
+    (folder / f"{profile.slug}-stylometry-report.html").write_text(
+        markdown_page(f"{profile.name} — measured profile", report_md), encoding="utf-8")
+    (folder / f"{profile.slug}-style-card.html").write_text(
+        markdown_page(f"{profile.name} — provisional style card",
+            "> Author review needed. Observed patterns are not automatically preferred targets.\n\n" + card_md), encoding="utf-8")
     profile.save(folder / "profile.json")
     write_chunk_csv(folder / "chunk-metrics.csv", chunks)
     write_work_csv(folder / "work-metrics.csv", profile.works)
@@ -335,10 +343,23 @@ def write_reference(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--author", help="build one author only (slug)")
+    parser.add_argument("--author", choices=sorted(AUTHORS), help="write this author profile only; shared reference still requires all configured sources")
     args = parser.parse_args()
 
-    catalog = load_catalog()
+    if not AUTHORS:
+        parser.error("No authors are configured. For a first try, use scripts/stylo_explore.py --demo.")
+    try:
+        catalog = load_catalog()
+    except (OSError, UnicodeError, KeyError, ValueError) as error:
+        parser.error(f"Cannot read the source catalog: {error}. The no-download demo is scripts/stylo_explore.py --demo.")
+    missing = [w.rel_path for w in catalog if w.included and w.author_slug in AUTHORS and not w.path.is_file()]
+    empty = [slug for slug in AUTHORS if not any(w.author_slug == slug and w.included for w in catalog)]
+    if missing or empty:
+        details = "; ".join(["missing sources: " + ", ".join(missing[:3])] if missing else [])
+        if empty:
+            details += "; no included works for: " + ", ".join(empty)
+        parser.error("The full profile build needs its configured source collection. " + details +
+                     ". Nothing was downloaded. Use scripts/stylo_explore.py --demo for a first try; see guide/profiles.html for optional profile setup.")
     log("Measuring corpus…")
     data = collect(catalog)
 

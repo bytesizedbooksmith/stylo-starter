@@ -9,3 +9,6 @@ authors/*/works/*.txt
 # Python
 __pycache__/
 *.pyc
+
+# Personal exploration output; the included examples/results are intentional.
+reports/

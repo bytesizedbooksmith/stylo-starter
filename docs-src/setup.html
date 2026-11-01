@@ -1,0 +1,22 @@
+<h1>Let the AI handle the setup.</h1><p class="lede">You can read the included example right away. New measurements need a working Python interpreter.</p>
+<p>The basic tool uses Python's built-in libraries. It does not need SpaCy, a reference-book collection, an API key, or additional Python packages. Your chosen AI app may have its own account requirements.</p>
+<h2>Choose the tool you already use</h2>
+<table><thead><tr><th>Tool</th><th>Starting point</th></tr></thead><tbody>
+<tr><td>Codex</td><td>Open Writing Practice as the project/workspace. Paste the opening request.</td></tr>
+<tr><td>Claude Code</td><td>Start a session with access to Writing Practice. Paste the same request.</td></tr>
+<tr><td>Antigravity</td><td>Open Writing Practice and use its agent conversation. Paste the same request.</td></tr>
+<tr><td>VS Code</td><td>Open Writing Practice as a folder and use your configured AI assistant. The text editor alone does not perform the AI workflow.</td></tr>
+</tbody></table>
+<p>The shared request tells the assistant which Markdown instructions to read. It should check its actual file and execution access before promising a result.</p>
+<div class="prompt"><div class="promptbar"><span>Copy this into your AI</span><button type="button" class="copy">Copy prompt</button></div><pre tabindex="0"><code>Read stylo-starter/machine/SETUP.md. Check the folder access and Python runtime needed for the basic demonstration. Handle the steps your tools allow and explain only what I need to do. Don&#x27;t download reference books, install extra packages, or change system settings automatically. If execution isn&#x27;t available, help me open the included HTML example.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<h2>If Python is missing</h2>
+<p>You can still read <a href="demo.html">the included comparison</a>. If you want new measurements, ask your AI to help identify the next setup step. The <a href="https://www.python.org/downloads/">official Python downloads page</a> is the starting resource; you need not research a collection of tools.</p>
+<h2>If your chat cannot access folders</h2>
+<p>Attach <strong>machine/START.md</strong>, <strong>machine/SETUP.md</strong> and <strong>machine/workflows/first-look.md</strong>. Ask the assistant whether it can execute local Python files or only discuss them. If it can run uploaded code, supply the kit's scripts folder through the attachment method it supports. If it cannot, use the existing HTML demonstration.</p>
+<p>Attaching text or reports shares their contents with that AI service. Measuring locally is a separate action. Start with the supplied fictional examples if you prefer.</p>
+<details><summary>Official instruction-file resources</summary><ul>
+<li><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">Codex project instructions</a></li>
+<li><a href="https://code.claude.com/docs/en/memory">Claude Code project instructions</a></li>
+<li><a href="https://antigravity.google/docs/rules-workflows">Antigravity workspace rules</a></li>
+<li><a href="https://code.visualstudio.com/docs/agent-customization/custom-instructions">VS Code chat instructions</a></li></ul>
+<p>These adapters all point to the same AI workflow. The starter's scripts and HTML are tested locally; full live sessions in every listed AI app are not claimed.</p></details>

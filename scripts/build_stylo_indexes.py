@@ -597,3 +597,19 @@ def write_indexes(profiles: dict[str, AuthorProfile], attribution: dict) -> None
     write_index_md(profiles, attribution)
     write_comparison(profiles, attribution)
     update_author_readmes(profiles)
+    from stylo.html_report import markdown_page
+    import re
+    from html import escape
+    from urllib.parse import unquote
+    for source in STYLOMETRY.glob("*.md"):
+        html = markdown_page(source.stem, source.read_text(encoding="utf-8"))
+        def human_link(match):
+            target, label = match.group(1), match.group(2)
+            if target.startswith(("https://", "http://", "#")):
+                return match.group(0)
+            changed = re.sub(r"\.md(?=#|$)", ".html", target)
+            if (source.parent / unquote(changed.split("#")[0])).exists():
+                return '<a href="' + changed + '">' + label + '</a>'
+            return label + ' <span class="small">(not generated in this build)</span>'
+        html = re.sub(r'<a href="([^"]+)">(.*?)</a>', human_link, html)
+        source.with_suffix(".html").write_text(html, encoding="utf-8")
